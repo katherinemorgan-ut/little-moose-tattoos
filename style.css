@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Begin Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* End Reset */
+
+/* Constants */
+:root {
+    /* COLOR */
+    --BGCOLOR: #000;
+    --ALT-BGCOLOR: #fff;
+    --FONT-COLOR: #fff;
+    --ALT-FONT-COLOR: #000;
+    --FOOTER-FONT-COLOR: #656565;
+
+
+    /* FONTS */
+    --FF: 'Play', sans-serif; 
+    --FS: 1rem;
+    --FS-XL: 2.5rem;
+}
+
+/* General Styles */
+
+html {
+    font-size: var(--FS);
+    font-family: var(--FF);
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header {
+    background-color: var(--BGCOLOR);
+    color: var(--FONT-COLOR);
+    font-size: var(--FS-XL);
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    background-color: #000;
+    background-image: url('/img/tattoo_store.jpg');
+    background-size: 60%;
+}
+
+.main__welcome {
+    background-color: var(--ALT-BGCOLOR);
+    color: var(--ALT-FONT-COLOR);
+    padding: 2rem;
+    display: flex;
+    column-count: 2;
+    min-height: fit-content;
+}
+
+.main__h2 {
+    font-size: var(--FS-XL);
+    color: var(--ALT-FONT-COLOR);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    flex: 70%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.main__h3 {
+    font-size: var(--FS-XL);
+    color: var(--FONT-COLOR);
+    text-transform: uppercase;
+    text-decoration: underline;
+    flex: 70%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+
+
+.main__p {
+    padding: 1rem;
+    flex: 50%;
+}
+
+.main__artists {
+    background-color: var(--BGCOLOR);
+    display: inline-block;
+    width: 100%;
+    color: var(--FONT-COLOR);
+    display: flex;
+    flex-flow: column;
+}
+
+.main__tattoo-article {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 100%;
+}
+
+.main__tattoo {
+    display: flex;
+    width: 30%;
+    height: auto;
+    padding: 1rem;
+}
+
+:is(.main__instagram, .main__facebook) {
+    width: 3rem;
+    height: auto;
+    display: flex;
+}
+
+.main__faq {
+    background-color: var(--BGCOLOR);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url('img/tattooinprogress.jpg');
+    background-size: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+:is(.main__faq p,.main__faq h2,.main__faq h3)  {
+    opacity: 1;
+    color: var(--FONT-COLOR);
+}
+
+.main__faq h2 {
+    font-size: var(--FS-XL);
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.main__faq h3 {
+    text-decoration: underline;
+    font-weight: bolder;
+    text-transform:uppercase;
+}
+
+.main__contact {
+    background-color: var(--BGCOLOR);
+    color: var(--FONT-COLOR);
+    padding: 2rem;
+}
+
+.footer {
+    color: var(--FOOTER-FONT-COLOR);
+    text-align: center;
+    bottom: 0;
+}
+
+.footer p {
+    background-color: var(--BGCOLOR);
+    padding-top:4.5rem;
+    padding-left:2rem;
+}
+
+.footer a {
+    color: var(--FONT-COLOR);
+    margin: 2rem;
+    height: 2rem;
+}
+
+/* Modifiers */
+.text--uppercase-underline {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.text--white {
+    color: var(--FONT-COLOR);
+}
+
+.main__h2--white {
+    color: var(--FONT-COLOR);
+}
